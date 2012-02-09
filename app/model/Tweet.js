@@ -2,7 +2,8 @@ Ext.define('FakeMader.model.Tweet', {
     extend: 'Ext.data.Model',
 
     config: {
-        fields: [ 
+        fields: [
+            { name: 'id', mapping: 'id_str', type: 'int' },
             { name: 'text', },
             { name: 'retweet_count', type: 'int' },
             { name: 'created_at', type: 'date' },

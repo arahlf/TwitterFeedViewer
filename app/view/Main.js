@@ -1,6 +1,6 @@
-Ext.define('FakeMader.view.Feed', {
+Ext.define('FakeMader.view.Main', {
     extend: 'Ext.Panel',
-    requires: ['Ext.dataview.List', 'Ext.navigation.View'],
+    requires: ['Ext.Panel', 'Ext.navigation.View'],
 
     initialize: function() {
         this.setLayout('fit');
@@ -24,14 +24,7 @@ Ext.define('FakeMader.view.Feed', {
         }, {
             xtype: 'navigationview',
             items: [{
-            xtype: 'list',
-            store: 'Tweets',
-            itemTpl: '<div class="tweet">' +
-                          '<table><tr>' + 
-                               '<td><img src="{image}" /></td>' + 
-                               '<td><p>{text}</p><p class="timestamp">{created_at:date("F j, Y")}</p></td>' +
-                           '</tr></table>' + 
-                       '</div>'
+                xtype: 'tweetlist'
             }]
         }]);
 
