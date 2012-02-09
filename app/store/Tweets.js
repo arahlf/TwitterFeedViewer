@@ -4,11 +4,10 @@ Ext.define('FakeMader.store.Tweets', {
 
     config: {
         model: 'FakeMader.model.Tweet',
-        //data: [{ text: 'fooberries', user: { profile_image_url: 'fooooo' }}],
         proxy: {
             type: 'jsonp',
-            url: 'https://api.twitter.com/1/statuses/user_timeline.json?count=100',
-
+            //url: 'https://api.twitter.com/1/statuses/user_timeline.json?count=100',
+            url: 'app/dataz.json',
             reader: {
                 type: 'json',
                 rootProperty: 'results'
