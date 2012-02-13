@@ -81,6 +81,6 @@ Ext.define('FakeMader.controller.TweetController', {
     },
 
     index: function() {
-        // this gets called for some reason when running this.redirectTo('');
+        // this gets called for some reason when running this.redirectTo('index');
     }
 });

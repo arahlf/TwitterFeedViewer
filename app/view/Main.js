@@ -6,25 +6,28 @@ Ext.define('FakeMader.view.Main', {
         this.setLayout('fit');
 
         this.add([{
-            docked: 'top',
-            xtype: 'toolbar',
-            items: [{
-                xtype: 'title',
-                title: 'Twitter Feed Viewer'
-            }, {
-                xtype: 'component',
-                flex: 1  
-            }, {
-                xtype: 'textfield',
-                name: 'screenName'
-            }, {
-                xtype: 'button',
-                text: 'Search'
-            }]
-        }, {
             xtype: 'navigationview',
+            layout: {
+                type: 'card',
+                animation: false
+            },
             items: [{
-                xtype: 'tweetlist'
+                xtype: 'panel',
+                title: 'Twitter Feed Viewer',
+                layout: 'fit',
+                items: [{
+                    xtype: 'toolbar',
+                    docked: 'top',
+                    items: [{
+                        xtype: 'textfield',
+                        name: 'screenName'
+                    }, {
+                        xtype: 'button',
+                        text: 'Search'
+                    }]
+                }, {
+                    xtype: 'tweetlist'
+                }]
             }]
         }]);
 
